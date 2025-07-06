@@ -1,40 +1,63 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+[中文](./README.zh-CN.md)
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+# Power Color - Figma Plugin
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+Power Color is a powerful Figma plugin designed to streamline your color workflow. Generate comprehensive color palettes from a single base color, create beautiful harmonic color schemes, and instantly export them as Figma Variables, a style guide, or code snippets for your development projects.
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+![Power Color Plugin Screenshot](https://raw.githubusercontent.com/kazemai/power-color-figma/main/cover.png)
 
-  https://nodejs.org/en/download/
+## ✨ Features
 
-Next, install TypeScript using the command:
+- **🎨 Versatile Palette Generation**: Create color palettes in different modes:
+  - **Shades**: Generate a full spectrum of shades and tints from a base color.
+  - **Harmonic**: Instantly create Complementary, Analogous, or Triadic color schemes.
+- **⚙️ Precise Color Control**: Fine-tune your base color using Hex code input or HSL sliders. Feeling lucky? Hit the refresh button to get a random curated color.
+- **🚀 Figma Integration**:
+  - **Create Variables**: Automatically generate a new Figma Color Variable collection from your palette with one click.
+  - **Insert Style Guide**: Add a ready-to-use style guide frame to your document, displaying all colors with their names and codes.
+- **💻 Code Export**:
+  - Export your palette directly to your clipboard in multiple formats: **CSS Variables**, **SCSS Variables**, and **JSON**.
+  - A seamless one-click copy experience.
 
-  npm install -g typescript
+## 🛠️ Installation & Development
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+To get started with developing this plugin locally:
 
-  npm install --save-dev @figma/plugin-typings
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/kazemai/power-color-figma.git
+    cd power-color-figma
+    ```
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+2.  **Install dependencies:**
+    This project uses `pnpm` as the package manager.
+    ```bash
+    pnpm install
+    ```
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+3.  **Start the development server:**
+    This command will watch for file changes and automatically rebuild the plugin.
+    ```bash
+    pnpm run watch
+    ```
 
-For more information, visit https://www.typescriptlang.org/
+4.  **Load the plugin in Figma:**
+    - Open the Figma desktop app.
+    - Go to `Plugins` > `Development` > `Import plugin from manifest...`
+    - Select the `manifest.json` file located in the `dist` folder of this project.
+    - You will see "Power Color" in your development plugins list, ready to run!
 
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
+## 📜 Available Scripts
 
-We recommend writing TypeScript code using Visual Studio code:
+- `pnpm run build`: Creates a production-ready build in the `dist` folder.
+- `pnpm run watch`: Starts the development build with live-reloading.
+- `pnpm run lint`: Lints the code using ESLint.
+- `pnpm run lint:fix`: Lints the code and automatically fixes issues.
 
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
+## 🤝 Contributing
 
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+Contributions are welcome! If you have suggestions or find a bug, please feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
