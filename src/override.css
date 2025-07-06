@@ -1,0 +1,14 @@
+.fp-SelectTrigger {
+  height: var(--space-10);
+  font-size: var(--font-size-6);
+}
+
+.fp-Input {
+  font-size: var(--font-size-6);
+  height: var(--space-10);
+}
+
+.fp-Button {
+  font-size: var(--font-size-6);
+  height: var(--space-10);
+}
